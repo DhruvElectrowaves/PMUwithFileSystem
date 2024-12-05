@@ -1,0 +1,828 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF GIT-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Dec  4 2024 15:43:16[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=26d74h (159092) map[0m
+[0;32mI (159) esp_image: segment 1: paddr=00036d9c vaddr=3ffb0000 size=03fc8h ( 16328) load[0m
+[0;32mI (166) esp_image: segment 2: paddr=0003ad6c vaddr=40080000 size=052ach ( 21164) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a7174h (684404) map[0m
+[0;32mI (409) esp_image: segment 4: paddr=000e719c vaddr=400852ac size=12298h ( 74392) load[0m
+[0;32mI (450) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (450) boot: Disabling RNG early entropy source...[0m
+[0;32mI (462) cpu_start: Multicore app[0m
+[0;32mI (470) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (473) app_init: Project name:     app-template[0m
+[0;32mI (479) app_init: App version:      1[0m
+[0;32mI (483) app_init: Compile time:     Dec  4 2024 15:43:06[0m
+[0;32mI (489) app_init: ELF file SHA256:  a6a068d5a...[0m
+[0;32mI (494) app_init: ESP-IDF:          GIT-NOTFOUND[0m
+[0;32mI (500) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (504) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (509) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (514) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (522) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFB9990 len 00026670 (153 KiB): DRAM[0m
+[0;32mI (534) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (540) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (547) heap_init: At 40097544 len 00008ABC (34 KiB): IRAM[0m
+[0;32mI (554) spi_flash: detected chip: generic[0m
+[0;32mI (557) spi_flash: flash io: dio[0m
+[0;33mW (561) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (575) main_task: Started on CPU0[0m
+[0;32mI (585) main_task: Calling app_main()[0m
+[0;32mI (585) PMU_Charger: [APP] Startup..[0m
+[0;32mI (585) PMU_Charger: [APP] Free memory: 272436 bytes[0m
+[0;32mI (585) PMU_Charger: [APP] IDF version: GIT-NOTFOUND[0m
+[0;32mI (595) PMU_Charger: PMU Code Started with the Wifi Intialization[0m
+[0;32mI (605) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (605) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (615) CAN: TWAI driver installed and started.[0m
+[0;32mI (665) wifi:wifi driver task: 3ffc2dd4, prio:23, stack:6656, core=0[0m
+[0;32mI (675) wifi:wifi firmware version: ccaebfa[0m
+[0;32mI (675) wifi:wifi certification version: v7.0[0m
+[0;32mI (675) wifi:config NVS flash: enabled[0m
+[0;32mI (675) wifi:config nano formating: disabled[0m
+[0;32mI (675) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (685) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (685) wifi:Init management short buffer num: 32[0m
+[0;32mI (695) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (695) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (705) wifi:Init static rx buffer num: 10[0m
+[0;32mI (705) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (705) wifi_init: rx ba win: 6[0m
+[0;32mI (715) wifi_init: accept mbox: 6[0m
+[0;32mI (715) wifi_init: tcpip mbox: 32[0m
+[0;32mI (725) wifi_init: udp mbox: 6[0m
+[0;31mE (725) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (725) wifi_init: tcp mbox: 6[0m
+[0;32mI (735) wifi_init: tcp tx win: 5760[0m
+[0;32mI (735) wifi_init: tcp rx win: 5760[0m
+[0;32mI (745) wifi_init: tcp mss: 1440[0m
+[0;32mI (745) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (755) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (755) PMU_Charger: Wi-Fi credentials read from NVS[0m
+[0;32mI (765) PMU_Charger: Using stored Wi-Fi credentials: SSID=ApnaBanda[0m
+[0;32mI (765) PMU_Charger: Using stored Wi-Fi credentials: Password=12345abc[0m
+[0;33mW (775) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (785) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;31mE (835) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (875) wifi:mode : sta (d4:8a:fc:c5:b7:50)[0m
+[0;32mI (875) wifi:enable tsf[0m
+[0;32mI (875) PMU_Charger: Connecting to WiFi...[0m
+[0;32mI (885) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (885) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (895) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (895) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (925) wifi:connected with ApnaBanda, aid = 1, channel 1, BW20, bssid = d2:c2:e8:97:90:87[0m
+[0;32mI (925) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (925) wifi:pm start, type: 1[0m
+
+[0;32mI (925) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;31mE (945) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (1015) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;31mE (1055) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1165) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1275) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1385) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1495) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1605) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1715) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1825) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (1935) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (1935) esp_netif_handlers: sta ip: 192.168.137.68, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (1935) PMU_Charger: Connected to WiFi with IP Address: 192.168.137.68[0m
+[0;31mE (2045) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2155) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2265) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2375) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2485) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2595) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2705) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2815) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (2925) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3035) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3145) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3255) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3365) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3475) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3585) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (3915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4245) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4355) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4465) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4685) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4795) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (4905) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5015) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5125) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5235) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5565) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5675) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (5785) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (5875) PMU_Charger: Other event id:7[0m
+[0;32mI (5875) main_task: Returned from app_main()[0m
+[0;31mE (5895) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (5895) wifi:<ba-add>idx:0 (ifx:0, d2:c2:e8:97:90:87), tid:0, ssn:4, winSize:64[0m
+[0;31mE (6005) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6115) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6335) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6445) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6555) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6665) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6775) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6885) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (6995) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7105) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7215) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7325) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7435) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7545) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7655) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7765) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7875) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (7985) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8095) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8205) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8315) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8425) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8535) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8645) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8755) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8865) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (8975) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9085) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9195) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9305) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9415) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9525) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9635) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9745) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9855) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (9965) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10075) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10185) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10295) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10405) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10515) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10625) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10735) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10845) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (10955) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11065) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11175) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11285) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11395) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11505) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11615) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11725) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11835) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (11945) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12055) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12165) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12275) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12385) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12495) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12605) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12715) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12825) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (12935) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13045) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13155) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13265) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13375) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13485) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13595) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13705) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13815) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (13925) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14035) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14145) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14255) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14365) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14475) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14585) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (14915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15245) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15355) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15465) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15685) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15795) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (15905) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16015) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16125) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16235) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16565) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16675) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16785) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (16895) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (16995) PMU_Charger: MQTT_EVENT_CONNECTED[0m
+[0;32mI (16995) PMU_Charger: Subscribed to CMS topic with msg_id=19227[0m
+[0;32mI (16995) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=61016[0m
+[0;31mE (17005) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17105) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=14707[0m
+[0;31mE (17115) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17205) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=39622[0m
+[0;31mE (17225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17305) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=29253[0m
+[0;31mE (17335) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17405) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=63796[0m
+[0;31mE (17445) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17505) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=58948[0m
+[0;31mE (17555) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17605) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=17308[0m
+[0;31mE (17665) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17705) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=21094[0m
+[0;31mE (17775) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17805) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=2841[0m
+[0;31mE (17885) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (17905) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=970[0m
+[0;31mE (17995) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18005) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=43032[0m
+[0;31mE (18105) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18105) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=23320[0m
+[0;32mI (18205) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=29550[0m
+[0;31mE (18215) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18305) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=53034[0m
+[0;31mE (18325) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18405) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=34905[0m
+[0;32mI (18435) PMU_Charger: Other event id:3[0m
+[0;31mE (18435) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18435) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=61016[0m
+[0;32mI (18435) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=14707[0m
+[0;32mI (18445) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=39622[0m
+[0;32mI (18455) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=29253[0m
+[0;32mI (18455) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=63796[0m
+[0;32mI (18505) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=37378[0m
+[0;31mE (18545) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18605) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=47344[0m
+[0;32mI (18635) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=58948[0m
+[0;31mE (18655) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18705) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=17869[0m
+[0;31mE (18765) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18805) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=28067[0m
+[0;31mE (18875) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (18905) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=38494[0m
+[0;31mE (18985) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19005) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=52754[0m
+[0;31mE (19095) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19105) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=53291[0m
+[0;32mI (19205) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=17308[0m
+[0;31mE (19205) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19205) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=21345[0m
+[0;32mI (19215) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=21094[0m
+[0;32mI (19225) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=2841[0m
+[0;32mI (19235) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=970[0m
+[0;32mI (19235) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=43032[0m
+[0;32mI (19245) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=23320[0m
+[0;32mI (19245) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=29550[0m
+[0;32mI (19255) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=53034[0m
+[0;32mI (19265) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=34905[0m
+[0;32mI (19265) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=37378[0m
+[0;32mI (19275) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=47344[0m
+[0;31mE (19315) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19315) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=59827[0m
+[0;32mI (19415) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=63744[0m
+[0;31mE (19425) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19515) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=17027[0m
+[0;31mE (19535) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19615) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=59131[0m
+[0;31mE (19645) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19715) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=34206[0m
+[0;31mE (19755) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19755) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=17869[0m
+[0;32mI (19765) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=28067[0m
+[0;32mI (19815) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=9008[0m
+[0;31mE (19865) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (19915) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=30423[0m
+[0;31mE (19975) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20015) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=10094[0m
+[0;32mI (20065) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=38494[0m
+[0;32mI (20065) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=52754[0m
+[0;32mI (20075) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=53291[0m
+[0;32mI (20075) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=21345[0m
+[0;32mI (20085) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=59827[0m
+[0;32mI (20085) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=63744[0m
+[0;31mE (20095) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20115) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=32750[0m
+[0;31mE (20205) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20215) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=19073[0m
+[0;31mE (20315) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20315) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=2015[0m
+[0;32mI (20415) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=40667[0m
+[0;31mE (20425) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20485) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=17027[0m
+[0;32mI (20485) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=59131[0m
+[0;32mI (20485) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=34206[0m
+[0;32mI (20495) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=9008[0m
+[0;32mI (20495) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=30423[0m
+[0;32mI (20505) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=10094[0m
+[0;32mI (20515) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=57872[0m
+[0;31mE (20535) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20615) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=42738[0m
+[0;31mE (20645) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20715) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=52386[0m
+[0;31mE (20755) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20815) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=4677[0m
+[0;31mE (20865) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (20915) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=7120[0m
+[0;31mE (20975) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21015) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=42469[0m
+[0;31mE (21085) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21115) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=23360[0m
+[0;31mE (21195) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21215) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=53644[0m
+[0;31mE (21305) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21315) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=48435[0m
+[0;31mE (21415) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21415) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=42550[0m
+[0;32mI (21515) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=27379[0m
+[0;31mE (21525) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21615) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=59557[0m
+[0;31mE (21635) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21705) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=32750[0m
+[0;32mI (21715) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=19073[0m
+[0;32mI (21715) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=6534[0m
+[0;32mI (21725) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=2015[0m
+[0;32mI (21725) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=40667[0m
+[0;32mI (21735) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=57872[0m
+[0;32mI (21735) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=42738[0m
+[0;31mE (21745) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21815) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=21213[0m
+[0;31mE (21855) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (21895) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=52386[0m
+[0;32mI (21915) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=29015[0m
+[0;31mE (21965) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22015) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=46539[0m
+[0;31mE (22075) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22115) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=25431[0m
+[0;31mE (22185) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22215) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=55933[0m
+[0;31mE (22295) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22315) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=45353[0m
+[0;31mE (22405) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22415) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=26213[0m
+[0;31mE (22515) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22515) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=3752[0m
+[0;32mI (22615) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=59320[0m
+[0;31mE (22625) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22715) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=15407[0m
+[0;31mE (22735) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22815) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=37633[0m
+[0;31mE (22845) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (22915) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=21756[0m
+[0;31mE (22955) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23015) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=45900[0m
+[0;32mI (23035) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=4677[0m
+[0;32mI (23035) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=7120[0m
+[0;32mI (23045) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=42469[0m
+[0;32mI (23045) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=23360[0m
+[0;32mI (23055) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=53644[0m
+[0;32mI (23055) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=48435[0m
+[0;31mE (23065) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23065) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=42550[0m
+[0;32mI (23075) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=27379[0m
+[0;32mI (23085) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=59557[0m
+[0;32mI (23085) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=6534[0m
+[0;32mI (23095) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=21213[0m
+[0;32mI (23095) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=29015[0m
+[0;32mI (23105) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=46539[0m
+[0;32mI (23115) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=25431[0m
+[0;32mI (23115) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=4005[0m
+[0;32mI (23115) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=55933[0m
+[0;32mI (23135) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=45353[0m
+[0;31mE (23225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23225) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=18420[0m
+[0;32mI (23235) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=26213[0m
+[0;32mI (23245) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=3752[0m
+[0;32mI (23245) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=59320[0m
+[0;32mI (23245) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=15407[0m
+[0;32mI (23325) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=39517[0m
+[0;31mE (23345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23425) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=31692[0m
+[0;31mE (23455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23525) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=51157[0m
+[0;32mI (23555) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=37633[0m
+[0;32mI (23565) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=21756[0m
+[0;32mI (23565) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=45900[0m
+[0;32mI (23565) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=4005[0m
+[0;32mI (23575) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=18420[0m
+[0;31mE (23575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23625) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=46893[0m
+[0;31mE (23695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23725) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=63755[0m
+[0;31mE (23805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23825) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=54458[0m
+[0;31mE (23915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (23925) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=39684[0m
+[0;31mE (24025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (24025) PMU_Charger: Published to topic getChargerId/PE110ACDC00602I02G2300001 with payload {}, msg_id=60833[0m
+[0;32mI (24055) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=39517[0m
+[0;32mI (24065) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=31692[0m
+[0;32mI (24065) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=51157[0m
+[0;32mI (24075) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=46893[0m
+[0;32mI (24075) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=63755[0m
+[0;32mI (24085) PMU_Charger: Received data from topic: setChargerId/PE110ACDC00602I02G2300001[0m
+[0;32mI (24085) PMU_Charger: Data: 512[0m
+[0;32mI (24095) PMU_Charger: Processing setChargerId/PE110ACDC00602I02G2300001 logic[0m
+The charger Id is 512
+[0;32mI (24105) PMU_Charger: Charger ID saved to NVS: 512[0m
+[0;32mI (24105) PMU_Charger: NVS commit successful[0m
+[0;32mI (24125) PMU_Charger: Subscribed to CMS topic getComponentStatus/512 with msg_id=38727[0m
+[0;32mI (24125) PMU_Charger: Subscribed to CMS topic OTA/512 with msg_id=18236[0m
+[0;32mI (24125) PMU_Charger: Subscribed to CMS topic receivedConfigData/512 with msg_id=62674[0m
+[0;31mE (24135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (24255) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (24365) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (24475) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=54458[0m
+[0;31mE (24475) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (24475) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=39684[0m
+[0;32mI (24485) PMU_Charger: MQTT_EVENT_PUBLISHED, msg_id=60833[0m
+[0;32mI (24485) PMU_Charger: Other event id:3[0m
+[0;32mI (24495) PMU_Charger: Other event id:3[0m
+[0;32mI (24495) PMU_Charger: Other event id:3[0m
+[0;31mE (24585) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (24695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (24805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (24915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (25085) PMU_Charger: Received data from topic: setChargerId/PE110ACDC00602I02G2300001[0m
+[0;32mI (25085) PMU_Charger: Data: 512[0m
+[0;31mE (25135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25245) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25355) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25465) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25685) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25795) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (25905) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26015) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26125) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26235) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26565) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26675) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26785) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (26895) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27005) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27115) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27335) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27445) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27555) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27665) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27775) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27885) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (27995) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28105) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28215) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28325) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28435) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28545) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28655) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28765) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28875) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (28985) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29095) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29205) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29315) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29425) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29535) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29645) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29755) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29865) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (29975) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30085) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30195) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30305) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30415) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30525) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30635) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30745) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30855) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (30965) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31075) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31185) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31295) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31405) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31515) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31625) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31735) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31845) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (31955) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32065) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32175) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32285) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32395) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32505) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32615) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32725) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32835) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (32945) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33055) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33165) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33275) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33385) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33495) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33605) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33715) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33825) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (33935) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34045) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34155) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34265) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34375) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34485) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34595) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34705) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34815) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (34925) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35035) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35145) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35255) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35365) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35475) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35585) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (35915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36245) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36355) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36465) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36685) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36795) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (36905) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37015) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37125) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37235) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37565) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37675) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37785) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (37895) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38005) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38115) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38335) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38445) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38555) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38665) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38775) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38885) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (38995) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39105) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39215) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39325) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39435) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39545) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39655) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39765) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39875) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (39985) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40095) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40205) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40315) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40425) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40535) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40645) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40755) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40865) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (40975) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41085) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41195) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41305) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41415) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41525) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41635) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41745) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41855) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (41965) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42075) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42185) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42295) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42405) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42515) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42625) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42735) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42845) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (42955) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43065) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43175) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43285) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43395) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43505) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43615) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43725) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43835) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (43945) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44055) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44165) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44275) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44385) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44495) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44605) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44715) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44825) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (44935) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45045) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45155) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45265) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45375) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45485) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45595) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45705) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45815) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (45925) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46035) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46145) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46255) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46365) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46475) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46585) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (46915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47245) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47355) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47465) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47685) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47795) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (47905) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48015) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48125) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48235) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48565) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48675) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48785) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (48895) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49005) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49115) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49335) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49445) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49555) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49665) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49775) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49885) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (49995) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50105) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50215) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50325) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50435) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50545) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50655) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50765) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50875) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (50985) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51095) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51205) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51315) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51425) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51535) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51645) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51755) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51865) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (51975) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52085) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52195) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52305) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52415) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52525) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52635) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52745) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52855) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (52965) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53075) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53185) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53295) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53405) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53515) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53625) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53735) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53845) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (53955) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54065) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54175) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54285) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54395) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54505) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54615) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54725) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54835) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (54945) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55055) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (55085) PMU_Charger: Received data from topic: setChargerId/PE110ACDC00602I02G2300001[0m
+[0;32mI (55085) PMU_Charger: Data: 512[0m
+[0;31mE (55165) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55275) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55385) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55495) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55605) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55715) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55825) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (55935) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56045) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56155) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56265) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56375) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56485) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56595) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56705) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56815) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (56925) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;32mI (56925) PMU_Charger: Received data from topic: setChargerId/PE110ACDC00602I02G2300001[0m
+[0;32mI (56925) PMU_Charger: Data: 512[0m
+[0;31mE (57035) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57145) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57255) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57365) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57475) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57585) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57695) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57805) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (57915) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58025) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58135) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58245) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58355) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58465) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58575) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58685) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58795) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (58905) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59015) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59125) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59235) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59345) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59455) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59565) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59675) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59785) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (59895) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60005) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60115) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60225) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60335) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60445) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60555) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60665) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60775) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60885) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (60995) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61105) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61215) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61325) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61435) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61545) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61655) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61765) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61875) PMU_MCU-CAN: Error receiving CAN message: 263[0m
+[0;31mE (61985) PMU_MCU-CAN: Error receiving CAN message: 263[0m
