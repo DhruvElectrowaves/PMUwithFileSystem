@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/CMakeFiles/bootloader
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/CMakeFiles/bootloader.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/CMakeFiles/bootloader-complete.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

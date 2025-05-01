@@ -22,22 +22,27 @@
 
 #define PMU_MAJOR_VERSION 1 
 #define PMU_MINOR_VERSION 0  
-#define MAX_PCM_MODULE    10
+// #define MAX_PCM_MODULE    10
 
 // Define identifiers for different message types received from MCU
+
 #define FAULT_INFO_ID         0x31
 #define SESSION_INFO_ID       0x32
 #define PERIODIC_DATA_ID      0x33
 #define CHARGER_CONFIG_ID     0x34
 #define ACK_MCU_ID            0x35
+#define FAULT_LOG             0x36
 
 // Define identifiers for Sending message types transmitted from PMU
 #define ACK_PMU_ID            0x41
 #define PMU_INFO_ID           0x42
+#define PMU_REQUEST           0x43
 
 
 //----------------------------------- Variables of CAN ----------------------------
 extern char *CAN_MCU_TAG;
+extern int k;
+extern bool chargerPeriodicReceived;
 
 
 extern FaultInfo_t faultInfoCAN; 
@@ -57,6 +62,7 @@ extern void handle_session_info(uint8_t *data);
 extern void handle_periodic_data(uint8_t *data);
 extern void handle_charger_config(uint8_t *data);
 extern void handle_ack_mcu(uint8_t *data);
+void handle_fault_log(uint8_t *data);
 
 //This the minor function whcih are externed for PCM
 extern void handle_pcm_message(uint32_t identifier, uint8_t *data);

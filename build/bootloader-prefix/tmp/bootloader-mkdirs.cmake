@@ -3,20 +3,25 @@
 
 cmake_minimum_required(VERSION 3.5)
 
+# If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
+# existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
+# would cause a fatal error, even though it would be a no-op.
+if(NOT EXISTS "C:/Espressif/v5.3.2/esp-idf/components/bootloader/subproject")
+  file(MAKE_DIRECTORY "C:/Espressif/v5.3.2/esp-idf/components/bootloader/subproject")
+endif()
 file(MAKE_DIRECTORY
-  "E:/Espressif/frameworks/esp-idf-v5.3.1/components/bootloader/subproject"
-  "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader"
-  "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix"
-  "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/tmp"
-  "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp"
-  "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src"
-  "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/tmp"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "E:/ESP_Workspace/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
