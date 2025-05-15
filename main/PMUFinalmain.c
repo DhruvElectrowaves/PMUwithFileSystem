@@ -1691,7 +1691,7 @@ void app_main(void)
                             {
                                 if(!is_message_important)
                                     retry_count++;
-
+                                
                                 ESP_LOGW(SPIFFS_TAG, "Retry Count: %u", retry_count);
                                 if(retry_count >= 3){
                                     retry_count = 0;
@@ -1702,6 +1702,11 @@ void app_main(void)
                             }
                             else
                                 retry_count = 0;
+                            // else if(is_message_important == 2 || is_message_important == 3)
+                            // {
+
+                            // }
+
                         }
                         // Update the last_sent_message
                         free(last_sent_message);  // Free the old message

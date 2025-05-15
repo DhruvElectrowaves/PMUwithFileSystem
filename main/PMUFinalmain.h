@@ -295,6 +295,7 @@ typedef enum{
     initiatedStartedFaultyTermination = 3,
     initiatedStartedPowerOutage = 4
 }sessionTypeEnum;
+
 //-------------------------------------------------xxxxxx-------------------------------------------
 //MACROS
 #define NO_OF_CONNECTORS 3
@@ -634,12 +635,17 @@ typedef struct {
     uint8_t entries;
 }connectorFileName_t;
 
+typedef struct{
+    bool chargingSessionResponse: 1;
+    bool faultInfoResponse: 1;
+}responseReceivedCriticalMsg_t;
+
 extern internetStatus_t LCUinternetStatus;
 extern internetStatus_t LCUinternetStatusComponent;
 extern websocketStatus_t websocketStatus;
 extern websocketStatus_t websocketStatusComponent;
 extern connectorFileName_t *fileNameConnector;
-
+extern responseReceivedCriticalMsg_t responseReceived;
 
 typedef struct {
     uint8_t request_file_entries;

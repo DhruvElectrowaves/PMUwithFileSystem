@@ -150,10 +150,12 @@ ErrorMessageCodeEnumType validate_json_string(char *msg, char **error_uuid){
             {
                 ESP_LOGI(OCPP_TAG, "In ChargingSession next step validation payload call Result\n");
                 result = process_chargingSession_payload(payload);
+                // responseReceived.chargingSessionResponse = true;
             }
             else if(!(strcmp(action,"FaultInformation")))
             {
                 result = process_faultLog_payload(payload);
+                // responseReceived.faultInfoResponse = true;
             }
             // Deleting entry in req.txt file corresponding to the Response message UUID
             // if(!(strcmp(action,"ConfigurationData") == 0 && result != 0) || !(strcmp(action,"ChargingSession") == 0 && result != 0))
@@ -161,19 +163,91 @@ ErrorMessageCodeEnumType validate_json_string(char *msg, char **error_uuid){
             {
                 if(strcmp(action, "FaultInformation") != 0)
                 {
+                    // responseReceived.chargingSessionResponse = false;
                     int count = handle_response_message(message_id->valuestring);
                     if(count != -1)
                         fileInfo.request_file_entries = count;
                 }
-                else
+                else{
+                    // responseReceived.faultInfoResponse = false;
                     handle_fault_response_message(message_id->valuestring);
+                }   
             }
             break;
         }
-        
+
         case CALL_ERROR_ : {
+            // Expected format: [4, "<UniqueId>", "<errorCode>", "<errorDescription>", { <errorDetails> }]
+            cJSON *message_type_id = cJSON_GetArrayItem(json_array, 0);
+            cJSON *message_id = cJSON_GetArrayItem(json_array, 1);
+            cJSON *error_code = cJSON_GetArrayItem(json_array, 2);
+            cJSON *error_description = cJSON_GetArrayItem(json_array, 3);
+            cJSON *error_details = cJSON_GetArrayItem(json_array, 4);
+
+            // Validate MessageTypeId
+            if (!cJSON_IsNumber(message_type_id) || message_type_id->valueint != CALL_ERROR) {
+                ESP_LOGE(OCPP_TAG, "The MessageTypeId must be %d for a CALL_ERROR message.\n", CALL_ERROR);
+                cJSON_Delete(json_array);
+                return INVALID_MESSAGE_TYPE_ID;
+            }
+
+            // Validate MessageId
+            if (!cJSON_IsString(message_id) || (strlen(message_id->valuestring) > 36)) {
+                ESP_LOGE(OCPP_TAG, "The second element must be a string (MessageId) with a maximum length of 36 characters.\n");
+                cJSON_Delete(json_array);
+                return INVALID_MESSAGE_ID;
+            } else {
+                *error_uuid = strdup(message_id->valuestring);
+            }
+
+            // Validate ErrorCode and Description
+            if (!cJSON_IsString(error_code) || !cJSON_IsString(error_description)) {
+                ESP_LOGE(OCPP_TAG, "ErrorCode and ErrorDescription must be strings.\n");
+                cJSON_Delete(json_array);
+                return INVALID_CALL_ERROR_FORMAT;
+            }
+
+            char *action = get_action_from_uuid(message_id->valuestring); //to be decided the implementation later on, current it is anylsed from file in ocpp
+            if(action != NULL)
+                ESP_LOGW("ACTION", "Action is %s", action);
+            else 
+                ESP_LOGW("ACTION", "Action is NULL");
+                
+            if(action == NULL){
+                ESP_LOGE(OCPP_TAG,"No matching Request found for this Response");
+                cJSON_Delete(json_array);
+                return 0;
+            }
+
+            ESP_LOGE(OCPP_TAG, "CALL_ERROR received:\n  UUID: %s\n  Code: %s\n  Description: %s",
+                    message_id->valuestring,
+                    error_code->valuestring,
+                    error_description->valuestring);
+
+            if (cJSON_IsObject(error_details)) {
+                char *error_detail_str = cJSON_PrintUnformatted(error_details);
+                if (error_detail_str) {
+                    ESP_LOGE(OCPP_TAG, "  Details: %s", error_detail_str);
+                    free(error_detail_str);
+                }
+            }
+
+            // Optional: Clear request from tracking file if needed
+            if((strcmp(action,"FaultInformation")) == 0)
+            {
+                handle_fault_response_message(message_id->valuestring);
+                // if (count != -1)
+                //     fileInfo.request_file_entries = count;
+            }
+            else if((strcmp(action,"ChargingSession")) == 0)
+            {
+                handle_response_message(message_id->valuestring);
+                if (count != -1)
+                    fileInfo.request_file_entries = count;
+            }
             break;
         }
+
         default : 
         {
             return INVALID_MESSAGE_TYPE_ID;

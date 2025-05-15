@@ -1259,8 +1259,10 @@ void create_chargingSession_message()
     cJSON_AddNumberToObject(json, "connector", sessionInfoMQTT.connector);
     //All the fields below are optional
     if (sessionInfoMQTT.sessionType == initiatedButNotStarted ||  sessionInfoMQTT.sessionType == initiatedStartedNormalTermination || sessionInfoMQTT.sessionType == initiatedStartedFaultyTermination)
+    {
+        // sessionInfoMQTT.stopReason = 255;
         cJSON_AddNumberToObject(json, "stopReason", sessionInfoMQTT.stopReason);
-
+    }
     if(sessionInfoMQTT.sessionType == initiatedStartedNormalTermination || sessionInfoMQTT.sessionType == initiatedStartedFaultyTermination)
     {
         cJSON_AddStringToObject(json, "startDateTime", sessionInfoMQTT.startDateTime);
@@ -1335,6 +1337,8 @@ void create_faultLog_message(){
     char timestamp[30]; // Buffer to hold the timestamp string
     strftime(timestamp, sizeof(timestamp), "%Y-%m-%dT%H:%M:%SZ", &timeinfo);
     
+    // Added for testing
+    // faultLogMQTT.faultCode = 255;
     cJSON_AddStringToObject(json, "timestamp", timestamp); // Add formatted timestamp
     cJSON_AddNumberToObject(json, "type", faultLogMQTT.faultType);
     cJSON_AddNumberToObject(json, "connectorId", faultLogMQTT.player);
