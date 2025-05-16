@@ -974,8 +974,9 @@ void can_task(void *pvParameters)
             message_data[1] = (PMUInformation.internet_status & 0x01) | ((PMUInformation.broker_status & 0x01) << 1) | (PMUInformation.reserved << 2);          // Byte 2: Connection Status
             message_data[2] = PMUInformation.pmu_major_version;                                                                                                 // Byte 3
             message_data[3] = PMUInformation.pmu_minor_version;
-            message_data[4] = PMUInformation.quequeSizeCAN;                                                                                                // Byte 4
-            memcpy(&message_data[5], PMUInformation.unused, 3);                                                                                                 // Bytes 5-8
+            message_data[4] = (PMUInformation.quequeSizeCAN & 0xFF);                                                                                           // Byte 4
+            message_data[5] = (PMUInformation.quequeSizeCAN >> 8) & 0xFF;  
+            memcpy(&message_data[6], PMUInformation.unused, 3);                                                                                                 // Bytes 5-8
             send_can_message(PMU_INFO_ID, message_data, 8);       
             timerCounter = 0;
         }
@@ -1414,7 +1415,7 @@ void app_main(void)
     powerModulesCAN->dcCurrents.iTrf = FLT_MAX;
     powerModulesCAN->dcVoltages.fanVoltageMaster = FLT_MAX;
     powerModulesCAN->dcVoltages.fanVoltageSlave = FLT_MAX;
-    PMUInformation.quequeSizeCAN = 0xFF;
+    PMUInformation.quequeSizeCAN = 0xFFFF;
     //ESP_LOGW("FAULT_LOG", LOG_COLOR_CYAN "Init faultLogDataExchangedCAN = %d" LOG_RESET_COLORCYAN, faultLogCAN.faultLogDataExchanged);
 
     //Initialize All IPC Members by Zero or Default 
@@ -1448,7 +1449,7 @@ void app_main(void)
     powerModulesIPC->dcCurrents.iTrf = FLT_MAX;
     powerModulesIPC->dcVoltages.fanVoltageMaster = FLT_MAX;
     powerModulesIPC->dcVoltages.fanVoltageSlave = FLT_MAX;
-    PMUInformation.quequeSizeIPC = 0xFF;
+    PMUInformation.quequeSizeIPC = 0xFFFF;
     // ESP_LOGW("FAULT_LOG", LOG_COLOR_CYAN "Init faultLogDataExchangedIPC = %d" LOG_RESET_COLORCYAN, faultLogIPC.faultLogDataExchanged);
 
     //Initialize All MQTT Members by Zero or Default 
@@ -1484,7 +1485,7 @@ void app_main(void)
     powerModulesMQTT->dcCurrents.iTrf = FLT_MAX;
     powerModulesMQTT->dcVoltages.fanVoltageMaster = FLT_MAX;
     powerModulesMQTT->dcVoltages.fanVoltageSlave = FLT_MAX;
-    fileInfo.totalEntries = 0xFF;
+    fileInfo.totalEntries = 0xFFFF;
 
     // Modified by Shikha
     uint8_t k=0;

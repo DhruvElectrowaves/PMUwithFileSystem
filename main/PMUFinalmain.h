@@ -360,8 +360,8 @@ typedef struct {
     uint8_t reserved : 6;         // Bits 3-8: Reserved, set to 1
     double pmu_major_version;      // Byte 3: PMU Major Version Number
     double pmu_minor_version;      // Byte 4: PMU Minor Version Number
-    uint8_t quequeSizeIPC;
-    uint8_t quequeSizeCAN;
+    uint16_t quequeSizeIPC;
+    uint16_t quequeSizeCAN;
     uint8_t unused[4];         // Bytes 5-8: Not Used
 } can_message_t;
 
@@ -651,7 +651,7 @@ typedef struct {
     uint8_t request_file_entries;
     uint8_t offlineCharger_file_entries;
     uint8_t onlineCharger_file_entries;
-    uint8_t totalEntries;
+    uint16_t totalEntries;
 } fileStruct_t;
 
 extern fileStruct_t fileInfo;
