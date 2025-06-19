@@ -28,63 +28,10 @@ char *extract_action_from_json_response(const char *json_response) {
     return action; // Return the duplicated string (or NULL on failure)
 }
 
-/*
-char* get_action_from_uuid(const char *uuid) {
-    FILE *file = fopen(FILEPATH, "r");
-    if (!file) {
-        ESP_LOGE(SPIFFS_TAG, "Failed to open file for reading\n");
-        return NULL;
-    }
-
-    char line[TOTAL_LINE];
-    int found_match = 0;
-    char *action = NULL;
-
-    // Read through the file line-by-line
-    while (fgets(line, sizeof(line), file) != NULL) {
-        // Trim newline character from the line
-        line[strcspn(line, "\n")] = 0;
-
-        // Find the '|' character
-        char *separator = strchr(line, '|');
-        if (separator) {
-            char message[TOTAL_LINE];
-            size_t message_length = separator - line;
-            strncpy(message, line, message_length);
-            message[message_length] = '\0';
-
-            char *request_uuid = extract_uuid_from_json_response(message);
-
-            if (request_uuid) {
-                if (strcmp(request_uuid, uuid) == 0) {
-                    found_match = 1;
-                    ESP_LOGI(SPIFFS_TAG, "Found matching request entry for UUID: %s, getting action name", uuid);
-                    action = extract_action_from_json_response(message);
-                    free(request_uuid);
-                    break;
-                }
-                free(request_uuid);
-            }
-        }
-    }
-
-    fclose(file);
-
-    if (found_match) {
-        ESP_LOGI(SPIFFS_TAG, "Action is %s matching request entry with UUID: %s", action, uuid);
-    } else {
-        ESP_LOGE(SPIFFS_TAG, "No matching request entry found for UUID: %s", uuid);
-    }
-
-    return action;
-}
-*/
-
 char* search_uuid_in_file(const char *uuid, const char *filePath) {
         FILE *file = fopen(filePath, "r");
         if (!file) {
             ESP_LOGE(SPIFFS_TAG, "Failed to open file: %s for reading", filePath);
-            
             return NULL;
         }
         ESP_LOGI(SPIFFS_TAG, "Searching UUID in file: %s", filePath);
@@ -162,9 +109,8 @@ char* get_queued_request_messages(uint8_t *is_message_important) {
 
         FILE *file = fopen(FILEPATH, "r");
         if (!file) {
-            // ESP_LOGE(SPIFFS_TAG, "No request file found");
+            ESP_LOGE(SPIFFS_TAG, "Failed to open request file for reading in get_queued_request_messages");
             free(message);  // Free the allocated memory
-            
             return NULL;    // Return NULL if the file cannot be opened
         }
 
@@ -195,10 +141,6 @@ char* get_queued_request_messages(uint8_t *is_message_important) {
     // Successfully read and truncated the message
     // ESP_LOGI(SPIFFS_TAG, "Read message: %s", message);
 
-    // Check if this is a chargerConfig message
-    // if (strstr(message, "\"ConfigurationData\"") != NULL || strstr(message, "\"ChargingSession\"")){ 
-    //     *is_message_important = true;
-    // }
     // Check message type
     if (strstr(message, "\"ConfigurationData\"") != NULL) { 
         *is_message_important = 1;  // 1 = ConfigurationData

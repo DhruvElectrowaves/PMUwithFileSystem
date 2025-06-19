@@ -1029,7 +1029,6 @@ void print_uint8_string(const uint8_t* array) {
 }
 
 void request_config_data_from_MCU() {
-    
     ESP_LOGI("CONFIG", "Requesting Configuration Data from MCU via CAN...");
     uint8_t message_data[8] = {0};
     message_data[0] = 0x01;                                                                                               // Byte 1: Sequence Number
@@ -1323,7 +1322,7 @@ void save_payload_to_spiffs(const char *filename, const char *payload) {
             return;
         }
         
-        ESP_LOGI("SPIFFS", "Writing payload to file");
+        // ESP_LOGI("SPIFFS", "Writing payload to file");
         fprintf(f, "%s|%s\n", payload, timestamp);
         fclose(f);
         
@@ -1341,7 +1340,7 @@ void save_payload_to_spiffs(const char *filename, const char *payload) {
             }
         }
         //fileInfo.totalEntries = fileInfo.request_file_entries+fileInfo.onlineCharger_file_entries+fileInfo.offlineCharger_file_entries+fileNameConnector[0].entries+fileNameConnector[1].entries; 
-        print_file_entries(filename);
+        // print_file_entries(filename);
 
         // if (xSemaphoreTake(mutex, pdMS_TO_TICKS(5)) == pdTRUE) {
         //     fileInfo.totalEntries = fileInfo.request_file_entries 
@@ -1672,6 +1671,7 @@ void app_main(void)
                 msg = get_queued_request_messages(&is_message_important);
                 if(is_message_important == 2 && !publishMsgFlag.configDataExchanged)
                 {
+                    free(msg);  // Free the dynamically allocated message
                     msg = NULL;
                 }
             }

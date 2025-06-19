@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/CMakeFiles/bootloader"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/CMakeFiles/bootloader.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

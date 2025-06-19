@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_CORE4_faultLog/main
+# Install script for directory: C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

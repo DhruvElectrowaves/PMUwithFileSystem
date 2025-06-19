@@ -141,7 +141,7 @@ int handle_response_message(const char *response_uuid) {
         } else {
             ESP_LOGE(SPIFFS_TAG, "HandleResponseMessage: No matching request entry found for UUID: %s", response_uuid);
         }
-        print_file_entries(FILEPATH);
+        // print_file_entries(FILEPATH);
     return entry_count;  // Return the total number of entries
 }
 

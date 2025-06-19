@@ -1,6 +1,6 @@
 /* Automatically generated file; DO NOT EDIT */
 /* Espressif IoT Development Framework Linker Script */
-/* Generated from: C:\Users\dhruv\Zenergize\WorkSpaceESPIDF\Performance_Fault_Monitoring_CORE4_faultLog\build\esp-idf\esp_system\ld\sections.ld.in */
+/* Generated from: C:\Users\nihar\Zenergize\workspaceESPIDF\Performance_Fault_Monitoring_FinalCode1\build\esp-idf\esp_system\ld\sections.ld.in */
 
 /*
 
