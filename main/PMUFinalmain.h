@@ -746,6 +746,9 @@ extern esp_mqtt_client_handle_t mqtt_client;
 extern char pubTopic[];
 extern bool wifiConnected;
 
+//Critical Messages
+extern uint8_t critical_retry_count;
+
 
 //Flags
 extern uint32_t counterPeriodicCharger;
@@ -787,6 +790,8 @@ extern char* get_queued_request_messages(uint8_t *is_message_important);
 extern char* get_queued_fault_messages(int num_connectors);
 extern void delete_entry(const char *msg);
 extern void print_file_entries(const char* file_path);
+extern int search_and_delete_message_from_any_file(const char *target_message);
+extern int delete_line_if_found(const char *filepath, const char *target);
 
 //extern NVS files
 extern void fetch_keys();

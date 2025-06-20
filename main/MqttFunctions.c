@@ -1176,7 +1176,7 @@ void prepare_mqtt_send_config_data(){
             }
 
             if(flagConfig.pmuVersionFlag == 1){
-                cJSON_AddStringToObject(version_info, "pmu", "1.0");
+                cJSON_AddStringToObject(version_info, "pmu", "1.1");
                 flagConfig.pmuVersionFlag = 0;
             }
 

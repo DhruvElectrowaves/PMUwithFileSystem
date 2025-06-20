@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_FinalCode1/main
+# Install script for directory: C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

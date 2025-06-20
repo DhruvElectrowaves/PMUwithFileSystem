@@ -172,6 +172,7 @@ TaskHandle_t process_MQTT_msg_handler = NULL;
 char *last_sent_message = NULL;
 uint8_t count_retry_interval = 0;
 uint8_t retry_count = 0;
+uint8_t critical_retry_count = 0;
 char* msg = NULL;
 
 //Date Added 4/2/2025
@@ -1691,25 +1692,36 @@ void app_main(void)
                         if(last_sent_message != NULL){
                             if(strcmp(last_sent_message, msg)==0)
                             {
-                                if(!is_message_important)
+                                if(!is_message_important){
                                     retry_count++;
+                                    ESP_LOGW(SPIFFS_TAG, "Retry Count: %u", retry_count);
+                                }
+                                else{
+                                    critical_retry_count++; // retry count for important messages
+                                    ESP_LOGW(SPIFFS_TAG, "Retry Count: %u", critical_retry_count);
+                                    if(critical_retry_count >= 3){
+                                        // critical_retry_count = 0;
+                                        ESP_LOGW(SPIFFS_TAG, "Deleting critical Entry");
+                                        ESP_LOGW("DEBUG1","last critical msg sent : %s", last_sent_message);
+                                        delete_entry(last_sent_message);
+                                    }
+                                }
                                 
-                                ESP_LOGW(SPIFFS_TAG, "Retry Count: %u", retry_count);
                                 if(retry_count >= 3){
                                     retry_count = 0;
                                     //Add a condition to not delete 'ConfigurationData'
                                     ESP_LOGW(SPIFFS_TAG, "Deleting Entry");
                                     ESP_LOGW("DEBUG1","last msg sent : %s", last_sent_message);
-                                    delete_entry(last_sent_message);
+                                    int count = search_and_delete_message_from_any_file(last_sent_message);
+                                    // if(count)
+                                    // {
+                                    //     fileInfo.request_file_entries = count;
+                                    // }
+                                    // delete_entry(last_sent_message);
                                 }
                             }
                             else
                                 retry_count = 0;
-                            // else if(is_message_important == 2 || is_message_important == 3)
-                            // {
-
-                            // }
-
                         }
                         // Update the last_sent_message
                         free(last_sent_message);  // Free the old message
