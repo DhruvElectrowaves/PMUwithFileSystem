@@ -76,7 +76,8 @@ char wifi_password[64] = {0};
 char pubTopic[40];
 
 //+++++++++++++++++ For Testing Purpose we have set the Broker +++++++++++++++++++
-char mqtt_broker_uri[] = "mqtt://13.127.194.179:1883";
+//char mqtt_broker_uri[] = "mqtt://13.127.194.179:1883";
+char mqtt_broker_uri[] = "mqtt://broker.emqx.io:1883";
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 uint64_t lastCheckTime = 0;
@@ -329,7 +330,7 @@ uint8_t count_file_entries(const char *file_path)
     }
 
     int count = 0;
-    char line[2006]; // Buffer to store each line
+    char line[DEQUE_MSG_BUFFER]; // Buffer to store each line
 
     while (fgets(line, sizeof(line), f)) // Read file line by line
     {
@@ -1698,6 +1699,7 @@ void app_main(void)
                                     retry_count = 0;
                                     //Add a condition to not delete 'ConfigurationData'
                                     ESP_LOGW(SPIFFS_TAG, "Deleting Entry");
+                                    ESP_LOGW("DEBUG1","last msg sent : %s", last_sent_message);
                                     delete_entry(last_sent_message);
                                 }
                             }

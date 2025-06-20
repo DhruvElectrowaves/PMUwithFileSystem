@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/app_template")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Performance_Fault_Monitoring_BugFixed")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/nihar/Zenergize/workspaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/esp-idf/newlib/port/cmake_install.cmake")
+  include("C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_FinalCode1/build/esp-idf/newlib/port/cmake_install.cmake")
 endif()
 

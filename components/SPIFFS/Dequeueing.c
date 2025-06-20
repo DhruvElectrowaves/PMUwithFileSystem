@@ -10,7 +10,7 @@ fileStruct_t fileInfo = {0};
 void delete_entry(const char *msg){
     char *request_uuid = extract_uuid_from_json_response(msg);
     if (request_uuid) {
-        //ESP_LOGI("msg uuid", "%s", request_uuid);
+        ESP_LOGI("msg uuid", "%s", request_uuid);
         int count = handle_response_message(request_uuid);
         if(count != -1){
             fileInfo.request_file_entries = count;
@@ -35,6 +35,7 @@ void delete_entry(const char *msg){
 }
 
 char *extract_uuid_from_json_response(const char *json_response) {
+    ESP_LOGW("DEBUG1", "Raw JSON: %s", json_response);
     cJSON *json = cJSON_Parse(json_response);
     if (!json) {
         ESP_LOGE(SPIFFS_TAG, "Invalid JSON format in response\n");

@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.16)
 
 if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   file(REMOVE_RECURSE
-  "app_template.bin"
-  "app_template.map"
+  "Performance_Fault_Monitoring_BugFixed.bin"
+  "Performance_Fault_Monitoring_BugFixed.map"
   "bootloader\\bootloader.bin"
   "bootloader\\bootloader.elf"
   "bootloader\\bootloader.map"

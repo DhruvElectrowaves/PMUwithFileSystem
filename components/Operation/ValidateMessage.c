@@ -236,14 +236,28 @@ ErrorMessageCodeEnumType validate_json_string(char *msg, char **error_uuid){
             if((strcmp(action,"FaultInformation")) == 0)
             {
                 handle_fault_response_message(message_id->valuestring);
-                // if (count != -1)
-                //     fileInfo.request_file_entries = count;
             }
             else if((strcmp(action,"ChargingSession")) == 0)
             {
                 handle_response_message(message_id->valuestring);
                 if (count != -1)
                     fileInfo.request_file_entries = count;
+            }
+            else if((strcmp(action,"ChargerPeriodicData")) == 0)
+            {
+                handle_response_message(message_id->valuestring);
+                if (count != -1)
+                    fileInfo.request_file_entries = count;
+            }
+            else if((strcmp(action,"PCMPeriodicData")) == 0)
+            {
+                handle_response_message(message_id->valuestring);
+                if (count != -1)
+                    fileInfo.request_file_entries = count;
+            }
+            else
+            {
+                ESP_LOGE(OCPP_TAG, "CALL_ERROR received for an unknown action: %s", action);
             }
             break;
         }

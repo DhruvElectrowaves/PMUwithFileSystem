@@ -138,7 +138,6 @@ cJSON *create_PCM_and_ComponentStatus_payloadJSON(int startIndex, int endIndex, 
         cJSON_AddNumberToObject(powerModule, "id", i + 1);
         if(powerModulesMQTT[i].CANFailure == 1){
             cJSON_AddNumberToObject(powerModule, "commStatus", 0);
-            // printf("Power Module[%d] CANFailure: %d\n", i + 1, powerModulesMQTT[i].CANFailure);
         }
         else{
             cJSON_AddNumberToObject(powerModule, "commStatus", 1);
@@ -801,11 +800,9 @@ void create_chargerPeriodicData_message()
                 return;
             }
             cJSON_AddNumberToObject(commControllerObject, "commStatus", chargerPeriodicStatusMQTT.ev_evseCommRecv[connNumber]);
-            if(chargerPeriodicStatusMQTT.ev_evseCommRecv[connNumber] == FINE && chargerPeriodicStatusMQTT.ErrorCode0Recv[connNumber] != 0 && chargerPeriodicStatusMQTT.ErrorCode0Recv[connNumber] != 0xFF)
+            if(chargerPeriodicStatusMQTT.ev_evseCommRecv[connNumber] == FINE && chargerPeriodicStatusMQTT.ErrorCode0Recv[connNumber] != 0 && chargerPeriodicStatusMQTT.ErrorCode0Recv[connNumber] != 0xFF && chargerPeriodicStatusMQTT.ErrorCode0Recv[connNumber] >= 101)
             {
                 cJSON_AddNumberToObject(commControllerObject, "errorCode", chargerPeriodicStatusMQTT.ErrorCode0Recv[connNumber]);
-                //cJSON_AddNumberToObject(commControllerObject, "errorCode", 101);
-                
             }
             cJSON_AddItemToObject(connectorInfoObject, "commController", commControllerObject);
             
