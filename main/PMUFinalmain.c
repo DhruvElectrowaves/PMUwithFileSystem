@@ -76,8 +76,9 @@ char wifi_password[64] = {0};
 char pubTopic[40];
 
 //+++++++++++++++++ For Testing Purpose we have set the Broker +++++++++++++++++++
+char mqtt_broker_uri[] = "mqtt://13.201.218.63:1883";
 //char mqtt_broker_uri[] = "mqtt://13.127.194.179:1883";
-char mqtt_broker_uri[] = "mqtt://broker.emqx.io:1883";
+//char mqtt_broker_uri[] = "mqtt://broker.emqx.io:1883";
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 uint64_t lastCheckTime = 0;
@@ -437,7 +438,7 @@ void mqtt_task(void *pvParameters){
             if(xSemaphoreTake(mutex, (TickType_t)5) == pdTRUE){      
                 memcpy(&sessionInfoMQTT,&sessionInfoIPC,sizeof(sessionInfoMQTT));
                 memcpy(&faultLogMQTT, &faultLogIPC , sizeof(faultLogMQTT));
-                //ESP_LOGI("FAULT_LOG", LOG_COLOR_CYAN "faultLogDataExchangedMQTT: %d" LOG_RESET_COLOR, faultLogMQTT.faultLogDataExchanged);
+                ESP_LOGI("EXCHANGED", LOG_COLOR_CYAN "Between IPC and MQTT: %d" LOG_RESET_COLOR, faultLogMQTT.faultLogDataExchanged);
                 xSemaphoreGive(mutex);
             }
 
@@ -517,7 +518,7 @@ void mqtt_task(void *pvParameters){
             {
                 ESP_LOGI("FLAG", LOG_COLOR_PINK "chargingSessionOccured:%d" LOG_RESET_COLOR, sessionInfoMQTT.chargingSessionOccured);
                 ESP_LOGI("FLAG", LOG_COLOR_PINK "charging_sessionFlag:%d" LOG_RESET_COLOR, publishMsgFlag.charging_session);
-                publishMsgFlag.charging_session = sessionInfoMQTT.chargingSessionOccured;  // Update last state
+                publishMsgFlag.charging_session = sessionInfoMQTT.chargingSessionOccured;       //Update last state
                 ESP_LOGI("FLAG", LOG_COLOR_PINK "Last chargingSessionOccured:%d" LOG_RESET_COLOR, sessionInfoMQTT.chargingSessionOccured);
                 ESP_LOGI("FLAG", LOG_COLOR_PINK "Last charging_sessionFlag:%d" LOG_RESET_COLOR, publishMsgFlag.charging_session);
                 create_chargingSession_message();
@@ -1008,7 +1009,7 @@ void can_task(void *pvParameters)
                 memcpy(&powerModulesIPC, &powerModulesCAN, sizeof(powerModulesIPC));
                 memcpy(&sessionInfoIPC,&sessionInfoCAN,sizeof(sessionInfoIPC));
                 memcpy(&faultLogIPC,&faultLogCAN,sizeof(faultLogIPC));
-                // Unlock the mutex after writing to shared memory
+                //Unlock the mutex after writing to shared memory
                 xSemaphoreGive(mutex);
             }else{
                 //ESP_LOGE(CAN_MCU_TAG, "Failed to take mutex for storing IPC message.");

@@ -1230,9 +1230,9 @@ void handle_session_info(uint8_t *data){
         AckPmu.sequence_number = 1;
         if(publishMsgFlag.toggleChargingSession == 1 || publishMsgFlag.toggleChargingSession == 4)
             sessionInfoCAN.chargingSessionOccured ^= 1;
-        // ESP_LOGW("SESSION_INFO", "Session Type: %d", sessionInfoCAN.sessionType);
-        // ESP_LOGW("SESSION_INFO", "Connector: %d", sessionInfoCAN.connector);
-        // ESP_LOGW("SESSION_INFO", "Stop Reason: %d", sessionInfoCAN.stopReason);
+        ESP_LOGW("SESSION_INFO", "Session Type: %d", sessionInfoCAN.sessionType);
+        ESP_LOGW("SESSION_INFO", "Connector: %d", sessionInfoCAN.connector);
+        ESP_LOGW("SESSION_INFO", "Stop Reason: %d", sessionInfoCAN.stopReason);
 
         //if(publishMsgFlag.toggleChargingSession == 1 || publishMsgFlag.toggleChargingSession == 4)
             // ESP_LOGW("SESSION_INFO", "sessionInfoCAN.chargingSessionOccured: %d", sessionInfoCAN.chargingSessionOccured);
@@ -1336,10 +1336,10 @@ void handle_session_info(uint8_t *data){
             // ESP_LOGW("SESSION_INFO", "sessionInfoCAN.chargingSessionOccured: %d", sessionInfoCAN.chargingSessionOccured);
         }
         AckPmu.sequence_number = 9;
-        // ESP_LOGW("SESSION_INFO", "Estimated Cost: %.2f", sessionInfoCAN.estimatedCost);
-        // ESP_LOGW("SESSION_INFO", "Charge Duration: %lu sec", sessionInfoCAN.chargeDuration);
-        // ESP_LOGW("SESSION_INFO", "Start SoC: %d%%", sessionInfoCAN.startSoC);
-        // ESP_LOGW("SESSION_INFO", "End SoC: %d%%", sessionInfoCAN.endSoC);
+        ESP_LOGW("SESSION_INFO", "Estimated Cost: %.2f", sessionInfoCAN.estimatedCost);
+        ESP_LOGW("SESSION_INFO", "Charge Duration: %lu sec", sessionInfoCAN.chargeDuration);
+        ESP_LOGW("SESSION_INFO", "Start SoC: %d%%", sessionInfoCAN.startSoC);
+        ESP_LOGW("SESSION_INFO", "End SoC: %d%%", sessionInfoCAN.endSoC);
         break;
 
     default:

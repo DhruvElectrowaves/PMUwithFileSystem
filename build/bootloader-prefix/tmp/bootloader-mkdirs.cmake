@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/v5.3.2/esp-idf/components/bootloader/subproject")
   file(MAKE_DIRECTORY "C:/Espressif/v5.3.2/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader"
-  "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix"
-  "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix/tmp"
-  "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix/src"
-  "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/tmp"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src"
+  "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

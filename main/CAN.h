@@ -21,7 +21,7 @@
 #define RX_GPIO_NUM 33  // TWAI RX Pin
 
 #define PMU_MAJOR_VERSION 1 
-#define PMU_MINOR_VERSION 1  
+#define PMU_MINOR_VERSION 2  
 // #define MAX_PCM_MODULE    10
 
 // Define identifiers for different message types received from MCU

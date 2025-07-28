@@ -175,7 +175,6 @@ ErrorMessageCodeEnumType validate_json_string(char *msg, char **error_uuid){
             }
             break;
         }
-
         case CALL_ERROR_ : {
             // Expected format: [4, "<UniqueId>", "<errorCode>", "<errorDescription>", { <errorDetails> }]
             cJSON *message_type_id = cJSON_GetArrayItem(json_array, 0);
@@ -233,32 +232,18 @@ ErrorMessageCodeEnumType validate_json_string(char *msg, char **error_uuid){
             }
 
             // Optional: Clear request from tracking file if needed
-            if((strcmp(action,"FaultInformation")) == 0)
+            /*if((strcmp(action,"FaultInformation")) == 0)
             {
                 handle_fault_response_message(message_id->valuestring);
+                // if (count != -1)
+                //     fileInfo.request_file_entries = count;
             }
             else if((strcmp(action,"ChargingSession")) == 0)
             {
-                int count = handle_response_message(message_id->valuestring);
+                handle_response_message(message_id->valuestring);
                 if (count != -1)
                     fileInfo.request_file_entries = count;
-            }
-            else if((strcmp(action,"ChargerPeriodicData")) == 0)
-            {
-                int count = handle_response_message(message_id->valuestring);
-                if (count != -1)
-                    fileInfo.request_file_entries = count;
-            }
-            else if((strcmp(action,"PCMPeriodicData")) == 0)
-            {
-                int count = handle_response_message(message_id->valuestring);
-                if (count != -1)
-                    fileInfo.request_file_entries = count;
-            }
-            else
-            {
-                ESP_LOGE(OCPP_TAG, "CALL_ERROR received for an unknown action: %s", action);
-            }
+            }*/
             break;
         }
 

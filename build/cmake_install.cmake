@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed
+# Install script for directory: C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Performance_Fault_Monitoring_BugFixed")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Performance_Fault_Monitoring_FinalCode1")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/esp-idf/cmake_install.cmake")
+  include("C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/esp-idf/cmake_install.cmake")
 
 endif()
 
@@ -58,6 +58,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

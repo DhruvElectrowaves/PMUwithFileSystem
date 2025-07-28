@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/nihar/OneDrive/Desktop/Performance_Fault_Monitoring_BugFixed/main
+# Install script for directory: C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Performance_Fault_Monitoring_BugFixed")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Performance_Fault_Monitoring_FinalCode1")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
