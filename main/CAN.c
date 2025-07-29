@@ -151,7 +151,7 @@ void handle_periodic_data(uint8_t *data){
             chargerPeriodicStatusCAN.acMeterComm = data[7];						 //AC Meter Modbus Communication 
 			//printf("This is sequence Number 1 \n");
 			//printf("Grid Voltages: [%.1f, %.1f, %.1f]\n", chargerPeriodicStatusCAN.gridVoltages[0], chargerPeriodicStatusCAN.gridVoltages[1],  chargerPeriodicStatusCAN.gridVoltages[2]);
-			printf("AC Meter ModBus: %d",chargerPeriodicStatusCAN.acMeterComm);
+			//printf("AC Meter ModBus: %d",chargerPeriodicStatusCAN.acMeterComm);
 			break;
 			
 		case 2:
@@ -293,9 +293,9 @@ void handle_periodic_data(uint8_t *data){
             chargerPeriodicStatusCAN.connectorFaultCode[1] = data[6];
             chargerPeriodicStatusCAN.receivedDataChargerPeriodic = 1;
 			chargerPeriodicReceived = 1;	
-			ESP_LOGI("CHARGER_STATUS", "Charger Fault Code: %d", chargerPeriodicStatusCAN.chargerFaultCode);
-            ESP_LOGI("CHARGER_STATUS", "Connector 1 Fault Code: %d", chargerPeriodicStatusCAN.connectorFaultCode[0]);
-            ESP_LOGI("CHARGER_STATUS", "Connector 2 Fault Code: %d", chargerPeriodicStatusCAN.connectorFaultCode[1]);
+			//ESP_LOGI("CHARGER_STATUS", "Charger Fault Code: %d", chargerPeriodicStatusCAN.chargerFaultCode);
+            //ESP_LOGI("CHARGER_STATUS", "Connector 1 Fault Code: %d", chargerPeriodicStatusCAN.connectorFaultCode[0]);
+            //ESP_LOGI("CHARGER_STATUS", "Connector 2 Fault Code: %d", chargerPeriodicStatusCAN.connectorFaultCode[1]);
 			//Rest are 0xFF.
 			break;
 			
@@ -379,7 +379,7 @@ void handle_charger_config(uint8_t *data){
                                     tokenIndex++;
                                     strncpy(chargerConfigCAN.versionInfo.evseCommContoller[0], token, sizeof(chargerConfigCAN.versionInfo.evseCommContoller[0]) - 1);
                                     chargerConfigCAN.versionInfo.evseCommContoller[0][sizeof(chargerConfigCAN.versionInfo.evseCommContoller[0]) - 1] = '\0';
-                                    printf("EVSE Comm Controller 1: %s\n", chargerConfigCAN.versionInfo.evseCommContoller[0]);
+                                    //printf("EVSE Comm Controller 1: %s\n", chargerConfigCAN.versionInfo.evseCommContoller[0]);
 
                                     break;
                                     
@@ -387,7 +387,7 @@ void handle_charger_config(uint8_t *data){
                                     tokenIndex++;
                                     strncpy(chargerConfigCAN.versionInfo.evseCommContoller[1], token, sizeof(chargerConfigCAN.versionInfo.evseCommContoller[1]) - 1);
                                     chargerConfigCAN.versionInfo.evseCommContoller[1][sizeof(chargerConfigCAN.versionInfo.evseCommContoller[1]) - 1] = '\0';
-                                    printf("EVSE Comm Controller 2: %s\n", chargerConfigCAN.versionInfo.evseCommContoller[1]);
+                                    //printf("EVSE Comm Controller 2: %s\n", chargerConfigCAN.versionInfo.evseCommContoller[1]);
                                     break;      
                                
 /*                             case 5:
@@ -1230,9 +1230,9 @@ void handle_session_info(uint8_t *data){
         AckPmu.sequence_number = 1;
         if(publishMsgFlag.toggleChargingSession == 1 || publishMsgFlag.toggleChargingSession == 4)
             sessionInfoCAN.chargingSessionOccured ^= 1;
-        ESP_LOGW("SESSION_INFO", "Session Type: %d", sessionInfoCAN.sessionType);
-        ESP_LOGW("SESSION_INFO", "Connector: %d", sessionInfoCAN.connector);
-        ESP_LOGW("SESSION_INFO", "Stop Reason: %d", sessionInfoCAN.stopReason);
+        // ESP_LOGW("SESSION_INFO", "Session Type: %d", sessionInfoCAN.sessionType);
+        // ESP_LOGW("SESSION_INFO", "Connector: %d", sessionInfoCAN.connector);
+        // ESP_LOGW("SESSION_INFO", "Stop Reason: %d", sessionInfoCAN.stopReason);
 
         //if(publishMsgFlag.toggleChargingSession == 1 || publishMsgFlag.toggleChargingSession == 4)
             // ESP_LOGW("SESSION_INFO", "sessionInfoCAN.chargingSessionOccured: %d", sessionInfoCAN.chargingSessionOccured);
@@ -1336,10 +1336,10 @@ void handle_session_info(uint8_t *data){
             // ESP_LOGW("SESSION_INFO", "sessionInfoCAN.chargingSessionOccured: %d", sessionInfoCAN.chargingSessionOccured);
         }
         AckPmu.sequence_number = 9;
-        ESP_LOGW("SESSION_INFO", "Estimated Cost: %.2f", sessionInfoCAN.estimatedCost);
-        ESP_LOGW("SESSION_INFO", "Charge Duration: %lu sec", sessionInfoCAN.chargeDuration);
-        ESP_LOGW("SESSION_INFO", "Start SoC: %d%%", sessionInfoCAN.startSoC);
-        ESP_LOGW("SESSION_INFO", "End SoC: %d%%", sessionInfoCAN.endSoC);
+        // ESP_LOGW("SESSION_INFO", "Estimated Cost: %.2f", sessionInfoCAN.estimatedCost);
+        // ESP_LOGW("SESSION_INFO", "Charge Duration: %lu sec", sessionInfoCAN.chargeDuration);
+        // ESP_LOGW("SESSION_INFO", "Start SoC: %d%%", sessionInfoCAN.startSoC);
+        // ESP_LOGW("SESSION_INFO", "End SoC: %d%%", sessionInfoCAN.endSoC);
         break;
 
     default:

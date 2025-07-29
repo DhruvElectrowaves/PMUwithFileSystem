@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "Performance_Fault_Monitoring_FinalCode1",
-    "project_version":    "44ef31d-dirty",
+    "project_version":    "637d9a7-dirty",
     "project_path":       "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1",
     "idf_path":           "C:/Espressif/v5.3.2/esp-idf",
     "build_dir":          "C:/Users/dhruv/Zenergize/WorkSpaceESPIDF/Performance_Fault_Monitoring_FinalCode1/build",

@@ -438,7 +438,7 @@ void mqtt_task(void *pvParameters){
             if(xSemaphoreTake(mutex, (TickType_t)5) == pdTRUE){      
                 memcpy(&sessionInfoMQTT,&sessionInfoIPC,sizeof(sessionInfoMQTT));
                 memcpy(&faultLogMQTT, &faultLogIPC , sizeof(faultLogMQTT));
-                ESP_LOGI("EXCHANGED", LOG_COLOR_CYAN "Between IPC and MQTT: %d" LOG_RESET_COLOR, faultLogMQTT.faultLogDataExchanged);
+                //ESP_LOGI("EXCHANGED", LOG_COLOR_CYAN "Between IPC and MQTT: %d" LOG_RESET_COLOR, faultLogMQTT.faultLogDataExchanged);
                 xSemaphoreGive(mutex);
             }
 
@@ -1574,7 +1574,7 @@ void app_main(void)
             {
                 fileInfo.totalEntries += fileNameConnector[i].entries;
             }
-            printf(" The Queque Size in PMU is: %d \n", fileInfo.totalEntries);
+            //printf(" The Queque Size in PMU is: %d \n", fileInfo.totalEntries);
         }
         
         if(wifiConnected){

@@ -2,7 +2,7 @@
     "idf.espIdfPathWin": "C:\\Espressif\\v5.3.2\\esp-idf",
     "idf.toolsPathWin": "C:\\Espressif",
     "idf.flashType": "UART",
-    "idf.portWin": "COM20",
+    "idf.portWin": "COM13",
     "files.associations": {
         "mqtt_client.h": "c",
         "esp_wifi.h": "c",
